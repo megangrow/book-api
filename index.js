@@ -3,19 +3,14 @@ const app = express();
 const PORT = 3000;
 
 app.use(express.json());
-
-// fix cors
 const cors = require("cors");
 app.use(cors());
 
-// initialize db
 require("./db/database");
 
-// routes
-const bookRouter = require("./routes/library");
-app.use("/library", bookRouter);
+const libraryRouter = require("./routes/library");
+app.use("/library", libraryRouter);
 
-// basic health check endpoint
 app.get("/health", (req, res) => {
     res.status(200).json({
         status: "ok",
@@ -28,4 +23,3 @@ app.listen(PORT, () => {
     console.log("API is running");
     console.log(`Test the health check at http://localhost:${PORT}/health`);
 });
-
