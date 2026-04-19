@@ -1,352 +1,78 @@
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Martian',
-           'Andy Weir',
-           'The Martian follows astronaut Mark Watney as he uses science, ingenuity, and humor to survive alone on Mars after being mistakenly left behind by his crew.',
-           'book_1.jpg',
-           'TBR',
-           1
-       );
+INSERT INTO books (title, author, description, image, shelf, highlight) VALUES
+                                                                            ('The Martian', 'Andy Weir', 'The Martian follows astronaut Mark Watney as he uses science, ingenuity, and humor to survive alone on Mars after being mistakenly left behind by his crew.', 'book_1.jpg', 'TBR', 1),
+                                                                            ('Sunrise on the Reaping', 'Suzanne Collins', 'A Hunger Games prequel set during the 50th Games, exploring the world of Panem and the forces that shaped its rebellion.', 'book_5.jpg', 'TBR', 0),
+                                                                            ('Pride and Prejudice', 'Jane Austen', 'A classic romantic novel following Elizabeth Bennet as she navigates manners, marriage, morality, and misunderstandings in Regency England.', 'book_6.jpg', 'TBR', 1),
+                                                                            ('Little Women', 'Louisa May Alcott', 'The beloved story of the four March sisters as they grow up, face hardships, and discover their own paths in life.', 'book_7.jpg', 'TBR', 0),
+                                                                            ('Lessons in Chemistry', 'Bonnie Garmus', 'A brilliant chemist in the 1960s unexpectedly becomes the star of a cooking show, challenging societal expectations for women.', 'book_8.jpg', 'TBR', 0),
+                                                                            ('The Book of Lost Names', 'Kristin Harmel', 'During World War II, a young Jewish woman forges documents for children escaping the Nazis while secretly encoding their real identities.', 'book_9.jpg', 'TBR', 0),
+                                                                            ('Mr. Lemoncello''s Library', 'Chris Grabenstein', 'A group of kids compete in a puzzle-filled overnight adventure inside the world''s most imaginative library.', 'book_10.jpg', 'TBR', 0),
+                                                                            ('Project Hail Mary', 'Andy Weir', 'A lone astronaut wakes up in space with no memory and must save Earth from an extinction-level threat.', 'book_11.jpg', 'TBR', 1),
+                                                                            ('The Night Circus', 'Erin Morgenstern', 'Two young magicians compete in a mysterious magical duel inside a traveling circus that appears only at night.', 'book_12.jpg', 'TBR', 0),
+                                                                            ('Everything I Know About Love', 'Dolly Alderton', 'A candid memoir about growing up, navigating relationships and heartbreak, and discovering the enduring power of friendship.', 'book_2.jpg', 'Read', 0),
+                                                                            ('Atomic Habits', 'James Clear', 'A practical guide showing how small daily habits can compound into remarkable personal and professional growth.', 'book_13.jpg', 'Read', 0),
+                                                                            ('Dune', 'Frank Herbert', 'An epic science fiction saga about politics, religion, ecology, and power on the desert planet Arrakis.', 'book_14.jpg', 'Read', 0),
+                                                                            ('The Hunger Games', 'Suzanne Collins', 'Katniss Everdeen volunteers for a deadly televised competition where only one tribute can survive.', 'book_15.jpg', 'Read', 0),
+                                                                            ('The Alchemist', 'Paulo Coelho', 'A shepherd boy travels the world seeking treasure and ultimately learns to follow his dreams.', 'book_16.jpg', 'Read', 0),
+                                                                            ('Where the Crawdads Sing', 'Delia Owens', 'A haunting coming-of-age mystery set in the marshes of North Carolina.', 'book_17.jpg', 'Read', 0),
+                                                                            ('The Seven Husbands of Evelyn Hugo', 'Taylor Jenkins Reid', 'A reclusive Hollywood icon recounts her glamorous and scandalous life story.', 'book_18.jpg', 'Read', 0),
+                                                                            ('The Great Gatsby', 'F. Scott Fitzgerald', 'A tragic story of love, ambition, and the illusion of the American dream in the roaring twenties.', 'book_19.jpg', 'Read', 0),
+                                                                            ('The Hobbit', 'J.R.R. Tolkien', 'Bilbo Baggins joins a quest to reclaim a dwarf kingdom from the dragon Smaug.', 'book_20.jpg', 'Read', 0),
+                                                                            ('The Fault in Our Stars', 'John Green', 'Two teenagers with cancer meet at a support group and fall deeply in love.', 'book_21.jpg', 'Read', 0),
+                                                                            ('Educated', 'Tara Westover', 'A memoir about a woman who leaves her survivalist family and pursues education.', 'book_22.png', 'Read', 0),
+                                                                            ('Circe', 'Madeline Miller', 'A retelling of the mythological witch Circe as she discovers her power and identity.', 'book_23.jpg', 'Read', 0),
+                                                                            ('A Tree Grows in Brooklyn', 'Betty Smith', 'This novel follows Francie Nolan''s coming-of-age in early 1900s Brooklyn as she endures poverty with resilience and hope.', 'book_3.jpg', 'Reading', 0),
+                                                                            ('Akin', 'Emma Donoghue', 'A retired professor travels to France with his young great-nephew and uncovers long-hidden family secrets.', 'book_4.jpg', 'Reading', 0),
+                                                                            ('The Midnight Library', 'Matt Haig', 'A woman discovers a magical library that lets her explore the lives she could have lived.', 'book_24.jpg', 'Reading', 0);
 
-INSERT INTO book_tags (description)
-VALUES ('Science Fiction');
-
-INSERT INTO book_tags (description)
-VALUES ('Adventure');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Sunrise on the Reaping',
-           'Suzanne Collins',
-           'A Hunger Games prequel set during the 50th Games, exploring the world of Panem and the forces that shaped its rebellion.',
-           'book_5.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Dystopian');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Adventure');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Pride and Prejudice',
-           'Jane Austen',
-           'A classic romantic novel following Elizabeth Bennet as she navigates manners, marriage, morality, and misunderstandings in Regency England.',
-           'book_6.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Romance');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Classic');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Little Women',
-           'Louisa May Alcott',
-           'The beloved story of the four March sisters as they grow up, face hardships, and discover their own paths in life.',
-           'book_7.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Classic');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Coming of Age');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Lessons in Chemistry',
-           'Bonnie Garmus',
-           'A brilliant chemist in the 1960s unexpectedly becomes the star of a cooking show, challenging societal expectations for women.',
-           'book_8.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Historical Fiction');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Humor');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Book of Lost Names',
-           'Kristin Harmel',
-           'During World War II, a young Jewish woman forges documents for children escaping the Nazis while secretly encoding their real identities.',
-           'book_9.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Historical Fiction');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'War');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Mr. Lemoncello''s Library',
-           'Chris Grabenstein',
-           'A group of kids compete in a puzzle-filled overnight adventure inside the world''s most imaginative library.',
-           'book_10.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Adventure');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Mystery');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Project Hail Mary',
-           'Andy Weir',
-           'A lone astronaut wakes up in space with no memory and must save Earth from an extinction-level threat.',
-           'book_11.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Science Fiction');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Space');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Night Circus',
-           'Erin Morgenstern',
-           'Two young magicians compete in a mysterious magical duel inside a traveling circus that appears only at night.',
-           'book_12.jpg',
-           'TBR',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Fantasy');
-INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Romance');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Everything I Know About Love',
-           'Dolly Alderton',
-           'A candid memoir about growing up, navigating relationships and heartbreak, and discovering the enduring power of friendship.',
-           'book_2.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Autobiography');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Memoir');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Atomic Habits',
-           'James Clear',
-           'A practical guide showing how small daily habits can compound into remarkable personal and professional growth.',
-           'book_13.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Self Improvement');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Productivity');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Dune',
-           'Frank Herbert',
-           'An epic science fiction saga about politics, religion, ecology, and power on the desert planet Arrakis.',
-           'book_14.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Science Fiction');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Epic');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Hunger Games',
-           'Suzanne Collins',
-           'Katniss Everdeen volunteers for a deadly televised competition where only one tribute can survive.',
-           'book_15.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Dystopian');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Adventure');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Alchemist',
-           'Paulo Coelho',
-           'A shepherd boy travels the world seeking treasure and ultimately learns to follow his dreams.',
-           'book_16.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Philosophy');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Adventure');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Where the Crawdads Sing',
-           'Delia Owens',
-           'A haunting coming-of-age mystery set in the marshes of North Carolina.',
-           'book_17.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Mystery');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Literary Fiction');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Seven Husbands of Evelyn Hugo',
-           'Taylor Jenkins Reid',
-           'A reclusive Hollywood icon recounts her glamorous and scandalous life story.',
-           'book_18.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Historical Fiction');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Drama');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Great Gatsby',
-           'F. Scott Fitzgerald',
-           'A tragic story of love, ambition, and the illusion of the American dream in the roaring twenties.',
-           'book_19.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Classic');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Literary Fiction');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Hobbit',
-           'J.R.R. Tolkien',
-           'Bilbo Baggins joins a quest to reclaim a dwarf kingdom from the dragon Smaug.',
-           'book_20.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Fantasy');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Adventure');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Fault in Our Stars',
-           'John Green',
-           'Two teenagers with cancer meet at a support group and fall deeply in love.',
-           'book_21.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Romance');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Young Adult');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Educated',
-           'Tara Westover',
-           'A memoir about a woman who leaves her survivalist family and pursues education.',
-           'book_22.png',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Memoir');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Inspiration');
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Circe',
-           'Madeline Miller',
-           'A retelling of the mythological witch Circe as she discovers her power and identity.',
-           'book_23.jpg',
-           'Read',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Fantasy');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Mythology');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'A Tree Grows in Brooklyn',
-           'Betty Smith',
-           'This novel follows Francie Nolan’s coming-of-age in early 1900s Brooklyn as she endures poverty with resilience and hope.',
-           'book_3.jpg',
-           'Reading',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Coming of Age');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Historical Fiction');
-
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'Akin',
-           'Emma Donoghue',
-           'A retired professor travels to France with his young great-nephew and uncovers long-hidden family secrets.',
-           'book_4.jpg',
-           'Reading',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Contemporary Fiction');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Historical Fiction');
-
-
-INSERT INTO books (title, author, description, image, shelf, highlight)
-VALUES (
-           'The Midnight Library',
-           'Matt Haig',
-           'A woman discovers a magical library that lets her explore the lives she could have lived.',
-           'book_24.jpg',
-           'Reading',
-           0
-       );
-
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Fantasy');
-INSERT OR IGNORE INTO book_tags (description) VALUES ('Philosophical');
+INSERT INTO book_tags (description) VALUES
+                                        ('Science Fiction'),
+                                        ('Adventure'),
+                                        ('Dystopian'),
+                                        ('Romance'),
+                                        ('Classic'),
+                                        ('Coming of Age'),
+                                        ('Historical Fiction'),
+                                        ('Humor'),
+                                        ('War'),
+                                        ('Mystery'),
+                                        ('Space'),
+                                        ('Fantasy'),
+                                        ('Autobiography'),
+                                        ('Memoir'),
+                                        ('Self Improvement'),
+                                        ('Productivity'),
+                                        ('Epic'),
+                                        ('Philosophy'),
+                                        ('Literary Fiction'),
+                                        ('Drama'),
+                                        ('Young Adult'),
+                                        ('Inspiration'),
+                                        ('Mythology'),
+                                        ('Contemporary Fiction'),
+                                        ('Philosophical');
 
 INSERT INTO books_with_tags (book_id, tag_id) VALUES
-                                                  (1, 1), (1, 2), (1, 10),
+                                                  (1, 1), (1, 2), (1, 8),
                                                   (2, 3), (2, 2),
-                                                  (3, 5), (3, 6),
-                                                  (4, 6), (4, 8),
-                                                  (5, 9), (5, 10),
-                                                  (6, 9), (6, 12),
-                                                  (7, 2), (7, 14),
-                                                  (8, 15), (8, 16),
-                                                  (9, 17), (9, 18),
-                                                  (10, 19), (10, 20),
-                                                  (11, 21), (11, 22),
-                                                  (12, 23), (12, 24),
-                                                  (13, 25), (13, 26),
-                                                  (14, 27), (14, 28),
-                                                  (15, 29), (15, 30),
-                                                  (16, 31), (16, 32),
-                                                  (17, 33), (17, 34),
-                                                  (18, 35), (18, 36),
-                                                  (19, 37), (19, 38),
-                                                  (20, 39), (20, 40),
-                                                  (21, 41), (21, 42),
-                                                  (22, 43), (22, 44),
-                                                  (23, 45), (23, 46),
-                                                  (24, 47), (24, 48);
-
+                                                  (3, 4), (3, 5),
+                                                  (4, 5), (4, 6),
+                                                  (5, 7), (5, 8),
+                                                  (6, 7), (6, 9),
+                                                  (7, 2), (7, 10),
+                                                  (8, 1), (8, 11),
+                                                  (9, 12), (9, 4),
+                                                  (10, 13), (10, 14),
+                                                  (11, 15), (11, 16),
+                                                  (12, 1), (12, 17),
+                                                  (13, 3), (13, 2),
+                                                  (14, 18), (14, 2),
+                                                  (15, 10), (15, 19),
+                                                  (16, 7), (16, 20),
+                                                  (17, 5), (17, 19),
+                                                  (18, 12), (18, 2),
+                                                  (19, 4), (19, 21),
+                                                  (20, 14), (20, 22),
+                                                  (21, 12), (21, 23),
+                                                  (22, 6), (22, 7),
+                                                  (23, 24), (23, 7),
+                                                  (24, 12), (24, 25);
