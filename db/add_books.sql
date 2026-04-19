@@ -14,12 +14,6 @@ VALUES ('Science Fiction');
 INSERT INTO book_tags (description)
 VALUES ('Adventure');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (1, 1);
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (1, 2);
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'Sunrise on the Reaping',
@@ -32,12 +26,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Dystopian');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Adventure');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Dystopian'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Adventure'));
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -52,14 +40,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Romance');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Classic');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Romance'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Classic'));
-
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'Little Women',
@@ -72,13 +52,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Classic');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Coming of Age');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Classic'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Coming of Age'));
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -93,13 +66,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Historical Fiction');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Humor');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Historical Fiction'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Humor'));
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'The Book of Lost Names',
@@ -112,13 +78,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Historical Fiction');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'War');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Historical Fiction'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='War'));
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -133,14 +92,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Adventure');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Mystery');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Adventure'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Mystery'));
-
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'Project Hail Mary',
@@ -154,13 +105,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Science Fiction');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Space');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Science Fiction'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Space'));
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'The Night Circus',
@@ -173,14 +117,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Fantasy');
 INSERT OR IGNORE INTO book_tags VALUES (NULL, 'Romance');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Fantasy'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Romance'));
-
-
 
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
@@ -196,14 +132,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Autobiography');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Memoir');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Autobiography'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Memoir'));
-
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'Atomic Habits',
@@ -217,14 +145,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Self Improvement');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Productivity');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Self Improvement'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Productivity'));
-
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'Dune',
@@ -237,13 +157,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Science Fiction');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Epic');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Science Fiction'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Epic'));
-
 
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
@@ -259,12 +172,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Dystopian');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Adventure');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Dystopian'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Adventure'));
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -278,13 +185,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Philosophy');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Adventure');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Philosophy'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Adventure'));
-
 
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
@@ -300,13 +200,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Mystery');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Literary Fiction');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Mystery'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Literary Fiction'));
-
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -320,13 +213,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Historical Fiction');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Drama');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Historical Fiction'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Drama'));
-
 
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
@@ -342,13 +228,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Classic');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Literary Fiction');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Classic'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Literary Fiction'));
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'The Hobbit',
@@ -361,13 +240,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Fantasy');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Adventure');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Fantasy'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Adventure'));
-
 
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
@@ -383,14 +255,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Romance');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Young Adult');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Romance'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Young Adult'));
-
-
-
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
            'Educated',
@@ -403,14 +267,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Memoir');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Inspiration');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Memoir'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Inspiration'));
-
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -425,12 +281,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Fantasy');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Mythology');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Fantasy'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Mythology'));
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -444,13 +294,6 @@ VALUES (
 
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Coming of Age');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Historical Fiction');
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Coming of Age'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Historical Fiction'));
-
 
 
 
@@ -467,13 +310,6 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Contemporary Fiction');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Historical Fiction');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Contemporary Fiction'));
-
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Historical Fiction'));
-
-
 
 INSERT INTO books (title, author, description, image, shelf, highlight)
 VALUES (
@@ -488,8 +324,29 @@ VALUES (
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Fantasy');
 INSERT OR IGNORE INTO book_tags (description) VALUES ('Philosophical');
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Fantasy'));
+INSERT INTO books_with_tags (book_id, tag_id) VALUES
+                                                  (1, 1), (1, 2), (1, 10),
+                                                  (2, 3), (2, 2),
+                                                  (3, 5), (3, 6),
+                                                  (4, 6), (4, 8),
+                                                  (5, 9), (5, 10),
+                                                  (6, 9), (6, 12),
+                                                  (7, 2), (7, 14),
+                                                  (8, 15), (8, 16),
+                                                  (9, 17), (9, 18),
+                                                  (10, 19), (10, 20),
+                                                  (11, 21), (11, 22),
+                                                  (12, 23), (12, 24),
+                                                  (13, 25), (13, 26),
+                                                  (14, 27), (14, 28),
+                                                  (15, 29), (15, 30),
+                                                  (16, 31), (16, 32),
+                                                  (17, 33), (17, 34),
+                                                  (18, 35), (18, 36),
+                                                  (19, 37), (19, 38),
+                                                  (20, 39), (20, 40),
+                                                  (21, 41), (21, 42),
+                                                  (22, 43), (22, 44),
+                                                  (23, 45), (23, 46),
+                                                  (24, 47), (24, 48);
 
-INSERT INTO books_with_tags (book_id, tag_id)
-VALUES (last_insert_rowid(), (SELECT id FROM book_tags WHERE description='Philosophical'));
