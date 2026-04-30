@@ -10,6 +10,8 @@ require("./db/database");
 
 const libraryRouter = require("./routes/library");
 app.use("/library", libraryRouter);
+const clubRouter = require("./routes/clubs");
+app.use("/clubs", clubRouter);
 
 app.get("/health", (req, res) => {
     res.status(200).json({

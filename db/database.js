@@ -27,6 +27,35 @@ db.exec(`
         FOREIGN KEY (book_id) REFERENCES books(id),
         FOREIGN KEY (tag_id) REFERENCES book_tags(id)
         );
+
+    CREATE TABLE IF NOT EXISTS book_clubs (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        name TEXT NOT NULL,
+        hours TEXT NOT NULL,
+        address TEXT NOT NULL,
+        members INTEGER NOT NULL,
+        image TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS book_club_tags (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        description TEXT NOT NULL
+    );
+
+    CREATE TABLE IF NOT EXISTS book_clubs_w_tags (
+         id INTEGER PRIMARY KEY AUTOINCREMENT,
+         club_id INTEGER NOT NULL,
+         tag_id INTEGER NOT NULL,
+         FOREIGN KEY (club_id) REFERENCES book_clubs(id),
+        FOREIGN KEY (tag_id) REFERENCES book_club_tags(id)
+    );
+
+    CREATE TABLE IF NOT EXISTS book_club_details (
+         id INTEGER PRIMARY KEY AUTOINCREMENT,
+         club_id INTEGER NOT NULL,
+         description TEXT NOT NULL,
+         FOREIGN KEY (club_id) REFERENCES book_clubs(id)
+    );
 `);
 
 module.exports = db;

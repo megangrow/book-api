@@ -51,7 +51,6 @@ router.post('/', (req, res) => {
             INSERT INTO books (title, author, description, image, shelf, highlight)
             VALUES (?, ?, ?, ?, ?, ?)
         `).run(title, author, description, image, shelf, highlight);
-        // ↑ had 6 columns but only 4 placeholders (?)
 
         const bookId = result.lastInsertRowid;
 

@@ -76,3 +76,55 @@ INSERT INTO books_with_tags (book_id, tag_id) VALUES
                                                   (22, 6), (22, 7),
                                                   (23, 24), (23, 7),
                                                   (24, 12), (24, 25);
+
+
+
+
+CREATE TABLE IF NOT EXISTS book_clubs (
+                                          id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                          name TEXT NOT NULL,
+                                          hours TEXT NOT NULL,
+                                          address TEXT NOT NULL,
+                                          members INTEGER NOT NULL,
+                                          image TEXT NOT NULL,
+                                          contact TEXT
+);
+
+INSERT INTO book_clubs (name, hours, address, members, image, contact) VALUES
+                                                                           ('Breakfast Book Club', 'Tuesdays at 9am', 'Online', 34, 'breakfast_club.jpg', 'Megan Grow. megan@email.com'),
+                                                                           ('SciFi', 'Thursdays at 7pm', 'Public Library: 340 Main St, Milwaukee, WI', 63, 'scifi_club.jpg', 'Jeremy Smith. jerrysmi@mail.com'),
+                                                                           ('History Enthusiasts', 'Sundays at 12pm', 'Virtual only', 8, 'history_club.png', 'Aaron Hunt. aahunt@email.mail.com'),
+                                                                           ('Hopeless Romantics', 'Saturdays at 2pm', 'Indie Coffee Shop, 334 West Ln, Baraboo, WI', 27, 'hearts_club.png', 'Jerri Manly. jerriluv@mail.net');
+
+
+INSERT INTO book_club_tags (description) VALUES
+                                             ('Human Behavior'),
+                                             ('Habits and Productivity'),
+                                             ('Self Improvement'),
+                                             ('Science Fiction'),
+                                             ('Outer Space'),
+                                             ('Dystopia'),
+                                             ('Biographies'),
+                                             ('History'),
+                                             ('Historical Fiction'),
+                                             ('Romance'),
+                                             ('Romantic Comedies'),
+                                             ('Period Pieces');
+
+INSERT INTO book_clubs_w_tags (club_id, tag_id) VALUES
+                                                    (1, 1), (1, 2), (1, 3),
+                                                    (2, 4), (2, 5), (2, 6),
+                                                    (3, 7), (3, 8), (3, 9),
+                                                    (4, 10), (4, 11), (4, 12);
+
+INSERT INTO book_club_details (club_id, description) VALUES
+                                                         (1, 'Casual group'),
+                                                         (1, 'Bring coffee and/or breakfast to the call'),
+                                                         (2, 'Virtual participation option'),
+                                                         (2, 'New members always welcome'),
+                                                         (2, 'Themed dress-up days once a month'),
+                                                         (3, 'Major history enthusiasts only'),
+                                                         (3, 'Deep thinking and discussions'),
+                                                         (4, 'Have a cup of coffee and talk about loveee'),
+                                                         (4, 'Bring a friend - new members always welcome!'),
+                                                         (4, 'Romantic books exclusively');
