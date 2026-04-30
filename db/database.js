@@ -8,54 +8,55 @@ db.pragma('foreign_keys = ON');
 // create the db if it doesn't exist
 db.exec(`
     CREATE TABLE IF NOT EXISTS books (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        title TEXT NOT NULL,
-        author TEXT NOT NULL,
-        description TEXT NOT NULL,
-        image TEXT NOT NULL,
-        shelf INTEGER NOT NULL,
-        highlight INTEGER CHECK (highlight IN (0, 1))
-    );
+                                         id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                         title TEXT NOT NULL,
+                                         author TEXT NOT NULL,
+                                         description TEXT NOT NULL,
+                                         image TEXT NOT NULL,
+                                         shelf INTEGER NOT NULL,
+                                         highlight INTEGER CHECK (highlight IN (0, 1))
+        );
     CREATE TABLE IF NOT EXISTS book_tags (
-         id INTEGER PRIMARY KEY AUTOINCREMENT,
-         description TEXT NOT NULL
+                                             id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                             description TEXT NOT NULL
     );
     CREATE TABLE IF NOT EXISTS books_with_tags (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        book_id INTEGER NOT NULL,
-        tag_id INTEGER NOT NULL,
-        FOREIGN KEY (book_id) REFERENCES books(id),
+                                                   id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                                   book_id INTEGER NOT NULL,
+                                                   tag_id INTEGER NOT NULL,
+                                                   FOREIGN KEY (book_id) REFERENCES books(id),
         FOREIGN KEY (tag_id) REFERENCES book_tags(id)
         );
 
     CREATE TABLE IF NOT EXISTS book_clubs (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        name TEXT NOT NULL,
-        hours TEXT NOT NULL,
-        address TEXT NOT NULL,
-        members INTEGER NOT NULL,
-        image TEXT NOT NULL
+                                              id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                              name TEXT NOT NULL,
+                                              hours TEXT NOT NULL,
+                                              address TEXT NOT NULL,
+                                              members INTEGER NOT NULL,
+                                              image TEXT NOT NULL,
+                                              contact TEXT NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS book_club_tags (
-        id INTEGER PRIMARY KEY AUTOINCREMENT,
-        description TEXT NOT NULL
+                                                  id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                                  description TEXT NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS book_clubs_w_tags (
-         id INTEGER PRIMARY KEY AUTOINCREMENT,
-         club_id INTEGER NOT NULL,
-         tag_id INTEGER NOT NULL,
-         FOREIGN KEY (club_id) REFERENCES book_clubs(id),
+                                                     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                                     club_id INTEGER NOT NULL,
+                                                     tag_id INTEGER NOT NULL,
+                                                     FOREIGN KEY (club_id) REFERENCES book_clubs(id),
         FOREIGN KEY (tag_id) REFERENCES book_club_tags(id)
-    );
+        );
 
     CREATE TABLE IF NOT EXISTS book_club_details (
-         id INTEGER PRIMARY KEY AUTOINCREMENT,
-         club_id INTEGER NOT NULL,
-         description TEXT NOT NULL,
-         FOREIGN KEY (club_id) REFERENCES book_clubs(id)
-    );
+                                                     id INTEGER PRIMARY KEY AUTOINCREMENT,
+                                                     club_id INTEGER NOT NULL,
+                                                     description TEXT NOT NULL,
+                                                     FOREIGN KEY (club_id) REFERENCES book_clubs(id)
+        );
 `);
 
 module.exports = db;
