@@ -17,8 +17,8 @@ db.exec(`
                                          highlight INTEGER CHECK (highlight IN (0, 1))
         );
     CREATE TABLE IF NOT EXISTS book_tags (
-                                             id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                             description TEXT NOT NULL
+         id INTEGER PRIMARY KEY AUTOINCREMENT,
+         description TEXT NOT NULL
     );
     CREATE TABLE IF NOT EXISTS books_with_tags (
                                                    id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -29,13 +29,13 @@ db.exec(`
         );
 
     CREATE TABLE IF NOT EXISTS book_clubs (
-                                              id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                              name TEXT NOT NULL,
-                                              hours TEXT NOT NULL,
-                                              address TEXT NOT NULL,
-                                              members INTEGER NOT NULL,
-                                              image TEXT NOT NULL,
-                                              contact TEXT NOT NULL
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      name TEXT NOT NULL,
+      hours TEXT NOT NULL,
+      address TEXT NOT NULL,
+      members INTEGER NOT NULL,
+      image TEXT NOT NULL,
+      contact TEXT NOT NULL
     );
 
     CREATE TABLE IF NOT EXISTS book_club_tags (
