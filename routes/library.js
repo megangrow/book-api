@@ -7,12 +7,12 @@ router.get('/', (req, res) => {
     try {
         const books = db.prepare('SELECT * FROM books').all();
         const tags = db.prepare(`
-            SELECT 
-              books_with_tags.book_id,
-              book_tags.description
+            SELECT
+                books_with_tags.book_id,
+                book_tags.description
             FROM books_with_tags
-            JOIN book_tags ON book_tags.id = books_with_tags.tag_id
-      `).all();
+                     JOIN book_tags ON book_tags.id = books_with_tags.tag_id
+        `).all();
 
         const groupedTags = {};
         for (const t of tags) {
@@ -81,5 +81,30 @@ router.post('/', (req, res) => {
         res.status(500).json({ error: 'Failed to create book' });
     }
 });
+
+// PATCH request
+router.patch('/', (req, res) => {
+    const { id, shelf } = req.body;
+
+    if (!shelf) {
+        return res.status(400).json({ error: 'Missing shelf!' });
+    }
+
+    try {
+        const result = db.prepare(`
+            UPDATE books SET shelf = ? WHERE id = ?
+        `).run(shelf, id);
+
+        if (result.changes === 0) {
+            return res.status(404).json({ error: 'Book not found' });
+        }
+
+        res.json({ id, shelf });
+
+    } catch (error) {
+        res.status(500).json({ error: 'Failed to update shelf' });
+    }
+
+})
 
 module.exports = router;
