@@ -80,16 +80,6 @@ INSERT INTO books_with_tags (book_id, tag_id) VALUES
 
 
 
-CREATE TABLE IF NOT EXISTS book_clubs (
-                                          id INTEGER PRIMARY KEY AUTOINCREMENT,
-                                          name TEXT NOT NULL,
-                                          hours TEXT NOT NULL,
-                                          address TEXT NOT NULL,
-                                          members INTEGER NOT NULL,
-                                          image TEXT NOT NULL,
-                                          contact TEXT
-);
-
 INSERT INTO book_clubs (name, hours, address, members, image, contact) VALUES
                                                                            ('Breakfast Book Club', 'Tuesdays at 9am', 'Online', 34, 'breakfast_club.jpg', 'Megan Grow. megan@email.com'),
                                                                            ('SciFi', 'Thursdays at 7pm', 'Public Library: 340 Main St, Milwaukee, WI', 63, 'scifi_club.jpg', 'Jeremy Smith. jerrysmi@mail.com'),
